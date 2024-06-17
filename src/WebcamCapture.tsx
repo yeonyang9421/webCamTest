@@ -7,6 +7,7 @@ const CamWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width:670px;
 `;
 
 // const CardBorder = styled.div`
@@ -58,8 +59,8 @@ const Button = styled.button<ButtonProps>`
 `;
 
 const videoConstraints = {
-  width: 1280,
-  height: 720,
+  width: 700,
+  height: 1220,
   facingMode: "user",
 };
 const Img = styled.img`
@@ -81,21 +82,23 @@ const WebcamCapture: React.FC = () => {
     <>
       <CamWrap>
         <Webcam
-          style={{ width: "100vw" }}
+          style={{ maxWidth:"700px" }}
           audio={false}
           mirrored
           ref={webcamRef}
           screenshotFormat="image/jpeg"
           videoConstraints={videoConstraints}
         />
-             <img src="https://youngintbasecamp2lrs.blob.core.windows.net/block/v2/5503f2ed-81c9-4096-a43e-fec8a3c93edf-origin.png" alt="Overlay" className="overlay-image" />
         {/* <CardBorder onClick={capture}>
           현재 보이는 화면으로 사진 찍기
         </CardBorder> */}
+        <img src="https://youngintbasecamp2lrs.blob.core.windows.net/block/v2/5503f2ed-81c9-4096-a43e-fec8a3c93edf-origin.png" alt="Overlay" className="overlay-image" />
       </CamWrap>
+      <CamWrap>
       <div style={{display:"flex", justifyContent:"center"}}>
       <Button onClick={capture}>사진 찍기</Button>
       </div>
+      </CamWrap>
       {imgSrc && <Img alt="pic" src={imgSrc} />}
     </>
   );

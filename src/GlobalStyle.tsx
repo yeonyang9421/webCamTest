@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     color: white;
     background: ${(props) => (props.whiteColor ? "white" : "black")};
     font-family: sans-serif;
+    max-width:800px;
+    max-height:800px;
   }
 `;
 

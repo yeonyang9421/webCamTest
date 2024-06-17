@@ -82,7 +82,7 @@ function App() {
   };
 
   return (
-    <div>
+    <div style={{maxWidth:"800px"}}>
       <GlobalStyle />
       <Button onClick={onTakePickture} theme="pink">
         사진찍기{" "}
