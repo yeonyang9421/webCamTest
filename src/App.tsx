@@ -1,14 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Camera from 'react-html5-camera-photo';
-import 'react-html5-camera-photo/build/css/index.css';
+import "./App.css";
+import Camera from "react-html5-camera-photo";
+import "react-html5-camera-photo/build/css/index.css";
 
 function App() {
-
-  function handleTakePhoto (dataUri: string) {
+  function handleTakePhoto(dataUri: string) {
     // Do stuff with the photo...
-    console.log('takePhoto',dataUri );
+    console.log("takePhoto", dataUri);
   }
   return (
     <div className="App">
@@ -25,9 +22,11 @@ function App() {
         >
           Learn React
         </a> */}
-            <Camera
-      onTakePhoto = { (dataUri) => { handleTakePhoto(dataUri); } }
-    />
+        <Camera
+          onTakePhoto={(dataUri) => {
+            handleTakePhoto(dataUri);
+          }}
+        />
       </header>
     </div>
   );
